@@ -1,25 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TextArea from "./components/TextArea";
+import Results from "./components/Results";
+import { SortingCriteria } from "./types";
+import { useState } from "react";
+import useWordCount from "./hooks/useWordCount";
+import {
+  AppLayout,
+  AppTitle,
+  Button,
+  ButtonContainer,
+  InputSection,
+} from "./styles";
+
+const APP_TITLE = "Word Count app";
 
 function App() {
+  const [input, setInput] = useState("");
+
+  const {
+    wordEntries,
+    isAscendingOrder,
+    toggleAscendingOrder,
+    sortingCriteria,
+    toggleSortingCriteria,
+  } = useWordCount(input, SortingCriteria.Frequency, true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppLayout>
+      <AppTitle>{APP_TITLE}</AppTitle>
+      <InputSection>
+        <ButtonContainer>
+          <Button onClick={() => toggleAscendingOrder((value) => !value)}>
+            Order: {isAscendingOrder ? "Ascending" : "Descending"}
+          </Button>
+          <Button
+            onClick={() => toggleSortingCriteria((value) => Number(!value))}
+          >
+            Sorting criteria: {SortingCriteria[sortingCriteria]}
+          </Button>
+        </ButtonContainer>
+
+        <TextArea
+          rows={5}
+          currentInput={input}
+          onChangeHandler={(e) => setInput(e.currentTarget.value)}
+        ></TextArea>
+      </InputSection>
+      <Results wordEntries={wordEntries} />
+    </AppLayout>
   );
 }
 
