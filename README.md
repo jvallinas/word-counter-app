@@ -47,4 +47,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Deployment
 
-Current version deployed on [Netlify](https://61139e0b1c071dba1c93fb05--amazing-keller-e6978d.netlify.app/)
+Current version deployed on [Netlify](https://amazing-keller-e6978d.netlify.app/)
