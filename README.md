@@ -13,11 +13,10 @@ The following additional tooling is used:
 
 In order to start the application, npm/yarn is required:
 
-- npm install npm@latest -g
-  npm install -g yarn
-  ```
-
-  ```
+```
+npm install npm@latest -g
+npm install -g yarn
+```
 
 ## Available Scripts
 
@@ -45,3 +44,7 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Deployment
+
+Current version deployed on [Netlify](https://61139e0b1c071dba1c93fb05--amazing-keller-e6978d.netlify.app/)
