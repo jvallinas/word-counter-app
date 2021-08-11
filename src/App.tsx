@@ -23,7 +23,7 @@ function App() {
     toggleAscendingOrder,
     sortingCriteria,
     toggleSortingCriteria,
-  } = useWordCount(input, SortingCriteria.Frequency, true);
+  } = useWordCount(input);
   return (
     <AppLayout>
       <AppTitle>{APP_TITLE}</AppTitle>

@@ -10,7 +10,7 @@ const reduceWordsByOccurrence = (
   return registry;
 };
 
-const getWordCountRegistry = (input?: string): WordCountRegistry => {
+export const getWordCountRegistry = (input?: string): WordCountRegistry => {
   if (!input) return {};
   const wordList = input.match(/[\w]*/g);
 
