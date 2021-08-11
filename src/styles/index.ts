@@ -17,7 +17,7 @@ export const AppLayout = styled.div`
   align-items: flex-start;
 
   ${DESKTOP_MEDIA_QUERY} {
-    max-width: ${DESKTOP_SCREEN_WIDTH};
+    max-width: ${DESKTOP_SCREEN_WIDTH}px;
   }
 `;
 AppLayout.displayName = "AppLayout";
