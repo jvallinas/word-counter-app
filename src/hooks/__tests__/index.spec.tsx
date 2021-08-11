@@ -6,10 +6,10 @@ import useWordCount, { getWordCountRegistry } from "../useWordCount";
 
 /* TEST MOCK DATA */
 
-const MOCK_INPUT_TEXT =
+export const MOCK_INPUT_TEXT =
   "A short sentence to mock some input to test this hook.";
 const MOCK_INPUT_TEXT_ALTERNATE_ORDER =
-  "A short sentence to test this hook to mock some input.";
+  "A short input to mock some sentence to test this hook.";
 
 const EXPECTED_WORD_COUNT_REGISTRY: WordCountRegistry = {
   A: 1,
@@ -24,7 +24,7 @@ const EXPECTED_WORD_COUNT_REGISTRY: WordCountRegistry = {
   hook: 1,
 };
 
-const EXPECTED_RESULT_ALPHABETICAL_ASCENDING: WordEntry[] = [
+export const EXPECTED_RESULT_ALPHABETICAL_ASCENDING: WordEntry[] = [
   ["A", 1],
   ["hook", 1],
   ["input", 1],
@@ -67,21 +67,6 @@ const EXPECTED_RESULT_OCCURRENCES_DESCENDING = [
   ["hook", 1],
 ];
 
-// Setting up a DOM element as a render target
-let container: Element = document.createElement("div");
-
-beforeEach(() => {
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  if (container) {
-    unmountComponentAtNode(container);
-    container.remove();
-  }
-});
-
 describe("utility functions for sorting", () => {
   it("should return same word registry consistently for same words in different order", async () => {
     expect(getWordCountRegistry(MOCK_INPUT_TEXT)).toStrictEqual(
@@ -94,6 +79,21 @@ describe("utility functions for sorting", () => {
 });
 
 describe("useWordCount hook behavior", () => {
+  // Setting up a DOM element as a render target
+  let container: Element = document.createElement("div");
+
+  beforeEach(() => {
+    container = document.createElement("div");
+    document.body.appendChild(container);
+  });
+
+  afterEach(() => {
+    if (container) {
+      unmountComponentAtNode(container);
+      container.remove();
+    }
+  });
+
   let testResult: WordEntry[];
 
   type TestHookProps = {

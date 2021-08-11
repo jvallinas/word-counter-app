@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea component should render properly 1`] = `
+<Fragment>
+  <StyledTextArea
+    onChange={[Function]}
+    placeholder="Enter some text here"
+    value="mockText"
+  />
+</Fragment>
+`;

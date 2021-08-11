@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Results component when no word entries are passed should render properly 1`] = `
+<Table>
+  <HeaderRow>
+    <CellWordCount>
+      Word
+    </CellWordCount>
+    <styled.div>
+      Occurrences
+    </styled.div>
+  </HeaderRow>
+  <NoResultsRow>
+    No entries available
+  </NoResultsRow>
+</Table>
+`;
+
+exports[`Results component when word entries are passed should render properly 1`] = `
+<Table>
+  <HeaderRow>
+    <CellWordCount>
+      Word
+    </CellWordCount>
+    <styled.div>
+      Occurrences
+    </styled.div>
+  </HeaderRow>
+  <Row
+    key="A"
+  >
+    <CellWordCount>
+      A
+    </CellWordCount>
+    <styled.div>
+      1
+    </styled.div>
+  </Row>
+  <Row
+    key="hook"
+  >
+    <CellWordCount>
+      hook
+    </CellWordCount>
+    <styled.div>
+      1
+    </styled.div>
+  </Row>
+  <Row
+    key="input"
+  >
+    <CellWordCount>
+      input
+    </CellWordCount>
+    <styled.div>
+      1
+    </styled.div>
+  </Row>
+  <Row
+    key="mock"
+  >
+    <CellWordCount>
+      mock
+    </CellWordCount>
+    <styled.div>
+      1
+    </styled.div>
+  </Row>
+  <Row
+    key="sentence"
+  >
+    <CellWordCount>
+      sentence
+    </CellWordCount>
+    <styled.div>
+      1
+    </styled.div>
+  </Row>
+  <Row
+    key="short"
+  >
+    <CellWordCount>
+      short
+    </CellWordCount>
+    <styled.div>
+      1
+    </styled.div>
+  </Row>
+  <Row
+    key="some"
+  >
+    <CellWordCount>
+      some
+    </CellWordCount>
+    <styled.div>
+      1
+    </styled.div>
+  </Row>
+  <Row
+    key="test"
+  >
+    <CellWordCount>
+      test
+    </CellWordCount>
+    <styled.div>
+      1
+    </styled.div>
+  </Row>
+  <Row
+    key="this"
+  >
+    <CellWordCount>
+      this
+    </CellWordCount>
+    <styled.div>
+      1
+    </styled.div>
+  </Row>
+  <Row
+    key="to"
+  >
+    <CellWordCount>
+      to
+    </CellWordCount>
+    <styled.div>
+      2
+    </styled.div>
+  </Row>
+</Table>
+`;
