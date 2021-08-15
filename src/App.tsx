@@ -27,6 +27,7 @@ function App() {
   return (
     <AppLayout>
       <AppTitle>{APP_TITLE}</AppTitle>
+
       <InputSection>
         <ButtonContainer>
           <Button onClick={() => toggleAscendingOrder((value) => !value)}>
@@ -45,6 +46,7 @@ function App() {
           onChangeHandler={(e) => setInput(e.currentTarget.value)}
         ></TextArea>
       </InputSection>
+
       <Results wordEntries={wordEntries} />
     </AppLayout>
   );
